@@ -1,4 +1,4 @@
-# Benchmarking Neural Network Robustness to Common Noise and Natural Scenes
+# Benchmarking Neural Network Robustness to Common Noises and Natural Scenes
 
 This repository contains datasets and code for generating typical noisy and natural scenes from the paper "CBA: Contextual Background Attack against Optical Aerial Detection in the Physical World".
 
@@ -32,3 +32,7 @@ If you find this useful in your research, please consider citing:
     year={2022},
     publisher={IEEE}
     }
+
+# Benchmarking Neural Network Robustness to  Adversarial Attacks
+
+In this benchmark, we evaluate adversarial robustness with 5 digital attacks, including Fast Gradient Sign Method (FGSM), AutoAttack (AA), Projected Gradient Descent (PGD), C&W, Momentum Iterative FGSM (MIFGSM).  Furthermore, we conduct the aforementioned attacks in both white-box and black-box conditions.
