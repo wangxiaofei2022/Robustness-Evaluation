@@ -1,0 +1,214 @@
+seed: 0
+model_save_path: "./base_models/"
+
+AID:
+  path: "./dataset/AID_0.5/"
+  num_class: 30
+
+densenet121:
+  pretrain: "./pre_models/densenet121-a639ec97.pth"
+  batchsize: 32
+  epoch: 30
+  save_freq: 5
+  optimizer: Adam
+  num_linear: 2048
+  Adam:
+    lr: 0.0001
+densenet169:
+  pretrain: "./pre_models/densenet169-b2777c0a.pth"
+  batchsize: 32
+  epoch: 30
+  save_freq: 5
+  optimizer: Adam
+  num_linear: 2048
+  Adam:
+    lr: 0.0001
+densenet201:
+  pretrain: "./pre_models/densenet201-c1103571.pth"
+  batchsize: 32
+  epoch: 30
+  save_freq: 5
+  optimizer: Adam
+  num_linear: 2048
+  Adam:
+    lr: 0.0001
+mobilenet_v2:
+  pretrain: "./pre_models/mobilenet_v2-7ebf99e0.pth"
+  batchsize: 32
+  epoch: 30
+  save_freq: 5
+  optimizer: Adam
+  num_linear: 2048
+  Adam:
+    lr: 0.0001
+mobilenet_v3_large:
+  pretrain: "./pre_models/mobilenet_v3_large-5c1a4163.pth"
+  batchsize: 32
+  epoch: 30
+  save_freq: 5
+  optimizer: Adam
+  num_linear: 2048
+  Adam:
+    lr: 0.0001
+mobilenet_v3_small:
+  pretrain: "./pre_models/mobilenet_v3_small-047dcff4.pth"
+  batchsize: 32
+  epoch: 30
+  save_freq: 5
+  optimizer: Adam
+  num_linear: 2048
+  Adam:
+    lr: 0.0001
+resnet101:
+  pretrain: "./pre_models/resnet101-cd907fc2.pth"
+  batchsize: 32
+  epoch: 30
+  save_freq: 5
+  optimizer: Adam
+  num_linear: 2048
+  Adam:
+    lr: 0.0001
+resnet152:
+  pretrain: "./pre_models/resnet152-f82ba261.pth"
+  batchsize: 32
+  epoch: 30
+  save_freq: 5
+  optimizer: Adam
+  num_linear: 2048
+  Adam:
+    lr: 0.0001
+resnet18:
+  pretrain: "./pre_models/resnet18-f37072fd.pth"
+  batchsize: 32
+  epoch: 30
+  save_freq: 5
+  optimizer: Adam
+  num_linear: 512
+  Adam:
+    lr: 0.0001
+resnet34:
+  pretrain: "./pre_models/resnet34-b627a593.pth"
+  batchsize: 32
+  epoch: 30
+  save_freq: 5
+  optimizer: Adam
+  num_linear: 512
+  Adam:
+    lr: 0.0001
+resnet50:
+  pretrain: "./pre_models/resnet50-11ad3fa6.pth"
+  batchsize: 32
+  epoch: 30
+  save_freq: 5
+  optimizer: Adam
+  num_linear: 2048
+  Adam:
+    lr: 0.0001
+resnext101_32x8d:
+  pretrain: "./pre_models/resnext101_32x8d-110c445d.pth"
+  batchsize: 32
+  epoch: 30
+  save_freq: 5
+  optimizer: Adam
+  num_linear: 2048
+  Adam:
+    lr: 0.0001
+resnext50_32x4d:
+  pretrain: "./pre_models/resnext50_32x4d-1a0047aa.pth"
+  batchsize: 32
+  epoch: 30
+  save_freq: 5
+  optimizer: Adam
+  num_linear: 2048
+  Adam:
+    lr: 0.0001
+shufflenet_v2_x0_5:
+  pretrain: "./pre_models/shufflenetv2_x0.5-f707e7126e.pth"
+  batchsize: 32
+  epoch: 30
+  save_freq: 5
+  optimizer: Adam
+  num_linear: 1024
+  Adam:
+    lr: 0.0001
+shufflenet_v2_x1_0:
+  pretrain: "./pre_models/shufflenetv2_x1-5666bf0f80.pth"
+  batchsize: 32
+  epoch: 30
+  save_freq: 5
+  optimizer: Adam
+  num_linear: 1024
+  Adam:
+    lr: 0.0001
+shufflenet_v2_x1_5:
+  pretrain: "./pre_models/shufflenetv2_x1_5-3c479a10.pth"
+  batchsize: 32
+  epoch: 30
+  save_freq: 5
+  optimizer: Adam
+  num_linear: 1024
+  Adam:
+    lr: 0.0001
+shufflenet_v2_x2_0:
+  pretrain: "./pre_models/shufflenetv2_x2_0-8be3c8ee.pth"
+  batchsize: 32
+  epoch: 30
+  save_freq: 5
+  optimizer: Adam
+  num_linear: 2048
+  Adam:
+    lr: 0.0001
+swin_s:
+  pretrain: "./pre_models/swin_s-5e29d889.pth"
+  batchsize: 32
+  epoch: 30
+  save_freq: 5
+  optimizer: Adam
+  num_linear: 2048
+  Adam:
+    lr: 0.0001
+swin_t:
+  pretrain: "./pre_models/swin_t-704ceda3.pth"
+  batchsize: 32
+  epoch: 30
+  save_freq: 5
+  optimizer: Adam
+  num_linear: 2048
+  Adam:
+    lr: 0.0001
+vit_b_16:
+  pretrain: "./pre_models/vit_b_16-c867db91.pth"
+  batchsize: 32
+  epoch: 30
+  save_freq: 5
+  optimizer: Adam
+  num_linear: 2048
+  Adam:
+    lr: 0.0001
+vit_b_32:
+  pretrain: "./pre_models/vit_b_32-d86f8d99.pth"
+  batchsize: 32
+  epoch: 30
+  save_freq: 5
+  optimizer: Adam
+  num_linear: 2048
+  Adam:
+    lr: 0.0001
+wide_resnet101_2:
+  pretrain: "./pre_models/wide_resnet101_2-d733dc28.pth"
+  batchsize: 32
+  epoch: 30
+  save_freq: 5
+  optimizer: Adam
+  num_linear: 2048
+  Adam:
+    lr: 0.0001
+wide_resnet50_2:
+  pretrain: "./pre_models/wide_resnet50_2-9ba9bcbe.pth"
+  batchsize: 32
+  epoch: 30
+  save_freq: 5
+  optimizer: Adam
+  num_linear: 2048
+  Adam:
+    lr: 0.0001
