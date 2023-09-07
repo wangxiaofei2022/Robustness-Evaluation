@@ -51,9 +51,9 @@ def attacks(net, dataloader, adv_way, device):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model_name', type=str, default='resnet18')
+    parser.add_argument('--model_name', type=str, default='densenet121')
     parser.add_argument('--dataset', type=str, default='AID')
-    parser.add_argument('--gpu', type=str, default='7')
+    parser.add_argument('--gpu', type=str, default='5')
     parser.add_argument('--attack', type=str, default='FGSM_l')
     args = parser.parse_args()
 

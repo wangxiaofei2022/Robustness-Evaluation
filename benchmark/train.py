@@ -84,9 +84,23 @@ def load_model(config, args, device, pretrain=True, mode='train'):
         model_pre = config[config['model_name']]['pretrain']
         ckpt = torch.load(model_pre)
         if config['model_name'][:8] == 'densenet':
-            ckpt = densnet_key_change(ckpt)
+             ckpt = densnet_key_change(ckpt)
         net.load_state_dict(ckpt)
-    net.fc = nn.Linear(config[args.model_name]['num_linear'], config[config['dataset']]['num_class'])
+
+    new_Linear = nn.Linear(config[args.model_name]['num_linear'], config[config['dataset']]['num_class'])
+    if 'densenet' in config['model_name']:
+        net.classifier = new_Linear
+    elif 'mobilenet_v2' in config['model_name']:
+        net.classifier[1] = new_Linear
+    elif 'mobilenet_v3' in config['model_name']:
+        net.classifier[3] = new_Linear
+    elif 'swin' in config['model_name']:
+        net.head = new_Linear
+    elif 'vit' in config['model_name']:
+        net.heads.head = new_Linear
+    else:
+        net.fc = new_Linear
+
     if mode == 'test':
         model_trained = os.path.join(config['model_save_path'], config['model_name'] + '.pth')
         ckpt = torch.load(model_trained)
@@ -148,14 +162,14 @@ def save_net(net, acc, path, file):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset', type=str, default='AID')
-    parser.add_argument('--model_name', type=str, default='shufflenet_v2_x2_0')
-    parser.add_argument('--gpu', type=str, default='4')
+    parser.add_argument('--model_name', type=str, default='densenet121')
+    parser.add_argument('--gpu', type=str, default='5')
     args = parser.parse_args()
 
     config = load_config('./config.yaml')
     config = updata_config(args, config)
     warnings_ignore()
-    fix_seed(config['seed'])
+    # fix_seed(config['seed'])
     set_gpu(args.gpu)
 
     path = config['model_save_path']
